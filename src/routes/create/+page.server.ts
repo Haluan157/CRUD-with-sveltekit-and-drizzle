@@ -13,7 +13,7 @@ export const actions = {
     const data = await request.formData()
     const breads = z.object({
       bread: z.string().trim().max(77),
-      price: z.number(),
+      price: z.number().min(500),
       stock: z.number().min(0),
       description: z.string().trim().nullable(),
     });
