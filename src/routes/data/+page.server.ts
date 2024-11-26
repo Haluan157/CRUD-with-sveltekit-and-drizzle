@@ -1,6 +1,6 @@
-import { show } from '$lib'
+import { showOne } from '$lib/server/bread'
 
 export async function load() {
-  let dataa = await show()
+  const dataa = await showOne()
   return { dataa }
 }
